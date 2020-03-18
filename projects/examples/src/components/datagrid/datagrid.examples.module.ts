@@ -12,8 +12,6 @@ import { DatagridCssClassesExampleComponent } from './datagrid-css-classes.examp
 import { DatagridCssClassesExampleModule } from './datagrid-css-classes.example.module';
 import { DatagridDetailRowExampleComponent } from './datagrid-detail-row.example.component';
 import { DatagridDetailRowExampleModule } from './datagrid-detail-row.example.module';
-import { DatagridFilterExampleComponent } from './datagrid-filter.example.component';
-import { DatagridFilterExampleModule } from './datagrid-filter.example.module';
 import { DatagridHeaderExampleComponent } from './datagrid-header.example.component';
 import { DatagridHeaderExampleModule } from './datagrid-header.example.module';
 import { DatagridHeightExampleComponent } from './datagrid-height.example.component';
@@ -30,6 +28,10 @@ import { DatagridSortExampleComponent } from './datagrid-sort.example.component'
 import { DatagridSortExampleModule } from './datagrid-sort.example.module';
 import { DatagridThreeRenderersExampleComponent } from './datagrid-three-renderers.example.component';
 import { DatagridThreeRenderersExampleModule } from './datagrid-three-renderers.example.module';
+import { DatagridFilterExampleModule } from './datagrid-filter.example.module';
+import { DatagridFilterExampleComponent } from './datagrid-filter.example.component';
+import { DatagridRowIconExampleModule } from './datagrid-row-icon.example.module';
+import { DatagridRowIconExampleComponent } from './datagrid-row-icon.example.component';
 
 Documentation.registerDocumentationEntry({
     component: DatagridComponent,
@@ -96,6 +98,16 @@ Documentation.registerDocumentationEntry({
             forComponent: null,
             title: 'Cliptext in the datagrid cells',
         },
+        {
+            component: DatagridFilterExampleComponent,
+            forComponent: null,
+            title: 'Filters in the datagrid columns',
+        },
+        {
+            component: DatagridRowIconExampleComponent,
+            forComponent: null,
+            title: 'Data row icon that reloads the row',
+        },
     ],
 });
 /**
@@ -115,6 +127,7 @@ Documentation.registerDocumentationEntry({
         DatagridHeaderExampleModule,
         DatagridFilterExampleModule,
         DatagridCliptextExampleModule,
+        DatagridRowIconExampleModule,
     ],
 })
 export class DatagridExamplesModule {}

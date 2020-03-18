@@ -40,7 +40,6 @@ const filters = [
         ReactiveFormsModule,
         ShowClippedTextDirectiveModule,
         FormsModule,
-        BrowserAnimationsModule,
         I18nModule,
     ],
     declarations: [DatagridComponent, ...directives, ...renderers, ...pipes, ...filters],
