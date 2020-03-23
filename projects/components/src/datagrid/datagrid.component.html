@@ -25,6 +25,7 @@
                     class="btn btn-icon"
                     (click)="button.handler(datagridSelection)"
                     [disabled]="isButtonDisabled(button, button.isActive(datagridSelection))"
+                    [ngClass]="button.class"
                 >
                     <a role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm">
                         <clr-icon [attr.shape]="button.icon"></clr-icon>
@@ -66,7 +67,7 @@
     </clr-dg-column>
 
     <clr-dg-row
-        *ngFor="let restItem of items; let i = index; trackBy: trackBy"
+        *clrDgItems="let restItem of items; let i = index; trackBy: trackBy"
         [ngForTrackBy]="trackBy"
         [ngClass]="this.clrDatarowCssClassGetter(restItem, i)"
         [clrDgItem]="restItem"
@@ -82,6 +83,7 @@
                     *ngFor="let button of this.getFeaturedButtons(restItem)"
                     (click)="button.handler([restItem])"
                     [disabled]="isButtonDisabled(button, button.isActive([restItem]))"
+                    [ngClass]="button.class"
                 >
                     <a role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm">
                         <clr-icon size="1em" [attr.shape]="button.icon" class="action-icon"></clr-icon>
